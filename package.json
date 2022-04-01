@@ -1,0 +1,38 @@
+{
+  "name": "@stdlib/math-base-special-fast-hypot",
+  "version": "0.0.0",
+  "description": "Compute the hypotenuse.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./index.mjs",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/math-base-special-fast-hypot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdfastmath",
+    "math",
+    "mathematics",
+    "fastmath",
+    "fast",
+    "euclid",
+    "euclidean",
+    "hypotenuse",
+    "geometry",
+    "hypot",
+    "triangle",
+    "pythagoras",
+    "pythagorean theorem",
+    "trigonometry",
+    "trig"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}

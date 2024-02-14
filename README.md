@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import hypot from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fast-hypot@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-fast-hypot/tags). For example,
+
+```javascript
 import hypot from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fast-hypot@v0.2.0-esm/index.mjs';
 ```
 
@@ -108,7 +113,7 @@ var h = hypot( -5.0, 12.0 );
 
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
 import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
-import hypot from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fast-hypot@v0.2.0-esm/index.mjs';
+import hypot from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fast-hypot@esm/index.mjs';
 
 var x;
 var y;

@@ -45,19 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-fast-hypot
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import hypot from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fast-hypot@deno/mod.js';
-```
-The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-fast-hypot/tags). For example,
-
-```javascript
-import hypot from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fast-hypot@v0.3.1-deno/mod.js';
+var hypot = require( '@stdlib/math-base-special-fast-hypot' );
 ```
 
 #### hypot( x, y )
@@ -106,9 +119,9 @@ var h = hypot( -5.0, 12.0 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
-import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@deno/mod.js';
-import hypot from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fast-hypot@deno/mod.js';
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var logEachMap = require( '@stdlib/console-log-each-map' );
+var hypot = require( '@stdlib/math-base-special-fast-hypot' );
 
 var opts = {
     'dtype': 'float64'
@@ -125,7 +138,89 @@ logEachMap( 'hypot(%d,%d) = %0.4f', x, y, hypot );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/math/base/special/fast/hypot.h"
+```
+
+#### stdlib_base_fast_hypot( x, y )
+
+Computes the hypotenuse.
+
+```c
+double h = stdlib_base_fast_hypot( 5.0, 12.0 );
+// returns 13.0
+```
+
+The function accepts the following arguments:
+
+-   **x**: `[in] double` input value.
+-   **y**: `[in] double` input value.
+
+```c
+double stdlib_base_fast_hypot( const double x, const double y );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/math/base/special/fast/hypot.h"
+#include <stdio.h>
+
+int main( void ) {
+    const double x[] = { 3.0, 4.0, 5.0, 12.0 };
+
+    double y;
+    int i;
+    for ( i = 0; i < 4; i += 2 ) {
+        y = stdlib_base_fast_hypot( x[ i ], x[ i + 1 ] );
+        printf( "hypot(%lf, %lf) = %lf\n", x[ i ], x[ i + 1 ], y );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -158,7 +253,7 @@ logEachMap( 'hypot(%d,%d) = %0.4f', x, y, hypot );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -188,8 +283,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/math-base-special-fast-hypot.svg
 [npm-url]: https://npmjs.org/package/@stdlib/math-base-special-fast-hypot
 
-[test-image]: https://github.com/stdlib-js/math-base-special-fast-hypot/actions/workflows/test.yml/badge.svg?branch=v0.3.1
-[test-url]: https://github.com/stdlib-js/math-base-special-fast-hypot/actions/workflows/test.yml?query=branch:v0.3.1
+[test-image]: https://github.com/stdlib-js/math-base-special-fast-hypot/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/math-base-special-fast-hypot/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/math-base-special-fast-hypot/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/math-base-special-fast-hypot?branch=main
@@ -225,7 +320,7 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/hypot]: https://github.com/stdlib-js/math-base-special-hypot/tree/deno
+[@stdlib/math/base/special/hypot]: https://github.com/stdlib-js/math-base-special-hypot
 
 <!-- </related-links> -->
 
